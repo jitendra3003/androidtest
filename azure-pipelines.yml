@@ -11,6 +11,11 @@ pool:
 
 steps:
 - script: echo Hello, world!
+- task: AndroidSigning@3
+  inputs:
+    apkFiles: '**/*.apk'
+    apksign: false
+    zipalign: false
   displayName: 'Run a one-line script'
 
 - script: |
